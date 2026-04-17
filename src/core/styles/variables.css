@@ -1,0 +1,61 @@
+/* ══════════════════════════════════════════════════
+   Design Tokens — Portfolio Theme Variables
+   ══════════════════════════════════════════════════ */
+
+:root {
+  /* Typography */
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Layout */
+  --max-width: 820px;
+
+  /* Accent palette (shared) */
+  --cyan: #38bdf8;
+  --teal: #2dd4bf;
+  --amber: #fbbf24;
+  --green: #34d399;
+  --purple: #a78bfa;
+}
+
+/* ─── Dark Mode (default) ─── */
+.dark-mode {
+  --bg: #030712;
+  --bg-card: #0d1526;
+  --border: rgba(56, 189, 248, 0.08);
+  --border-hover: rgba(56, 189, 248, 0.22);
+  --text-1: #e2e8f0;
+  --text-2: #8896ab;
+  --text-3: #64748b;
+  --nav-bg: rgba(3, 7, 18, 0.95);
+  --nav-mobile-bg: rgba(3, 7, 18, 0.97);
+  --pill-bg: rgba(255, 255, 255, 0.03);
+  --pill-border: rgba(255, 255, 255, 0.04);
+  --selection-bg: rgba(56, 189, 248, 0.2);
+  --card-shadow: rgba(0, 0, 0, 0.25);
+  --hero-dot-color: rgba(56, 189, 248, 0.04);
+}
+
+/* ─── Light Mode ─── */
+.light-mode {
+  --bg: #f8fafc;
+  --bg-card: #ffffff;
+  --border: rgba(15, 23, 42, 0.1);
+  --border-hover: rgba(56, 189, 248, 0.4);
+  --text-1: #0f172a;
+  --text-2: #475569;
+  --text-3: #64748b;
+  --nav-bg: rgba(248, 250, 252, 0.92);
+  --nav-mobile-bg: rgba(248, 250, 252, 0.97);
+  --pill-bg: rgba(15, 23, 42, 0.04);
+  --pill-border: rgba(15, 23, 42, 0.08);
+  --selection-bg: rgba(56, 189, 248, 0.25);
+  --card-shadow: rgba(0, 0, 0, 0.08);
+  --hero-dot-color: rgba(56, 189, 248, 0.06);
+  --cyan: #0284c7;
+  --teal: #0d9488;
+  --amber: #d97706;
+  --green: #059669;
+  --purple: #7c3aed;
+}
