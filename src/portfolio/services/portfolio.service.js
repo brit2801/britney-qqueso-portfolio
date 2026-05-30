@@ -16,7 +16,7 @@ export const PortfolioService = {
   },
 
   getFeaturedProjects() {
-    return projects.slice(0, 3);
+    return projects.slice(0, 4);
   },
 
   getAllProjects() {

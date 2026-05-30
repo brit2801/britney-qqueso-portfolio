@@ -10,13 +10,13 @@ const paragraphs = computed(() => [t.value.aboutP1, t.value.aboutP2, t.value.abo
 
 <template>
   <section id="about" class="section" aria-labelledby="about-heading">
-    <div class="container">
+    <div class="wrap">
       <section-header
         :label="t.aboutLabel"
         :title="t.aboutTitle"
         :title-highlight="t.aboutHighlight"
       />
-      <div class="about-text reveal" role="region" aria-label="About me description">
+      <div class="about-text glass reveal" role="region" aria-label="About me description">
         <p v-for="(text, index) in paragraphs" :key="index" v-html="text"></p>
       </div>
     </div>
@@ -24,11 +24,17 @@ const paragraphs = computed(() => [t.value.aboutP1, t.value.aboutP2, t.value.abo
 </template>
 
 <style scoped>
+.about-text {
+  max-width: 100%;
+  padding: clamp(1.4rem, 3vw, 2rem);
+}
+
 .about-text p {
   margin-bottom: 0.9rem;
   font-size: 1rem;
   line-height: 1.85;
   color: var(--text-2);       
+  break-inside: avoid;
 }
 
 .about-text :deep(strong) {

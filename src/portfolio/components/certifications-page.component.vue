@@ -31,7 +31,7 @@ useScrollReveal();
             role="listitem"
           >
             <span class="cert-name">{{ cert.name }}</span>
-            <span class="cert-meta">{{ cert.issuer }} · {{ cert.year }}</span>
+            <span class="cert-meta">{{ cert.issuer }} · {{ cert.date }}</span>
           </div>
         </div>
       </div>

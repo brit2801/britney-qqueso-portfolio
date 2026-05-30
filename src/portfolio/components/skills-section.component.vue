@@ -14,18 +14,20 @@ const dotColorMap = {
 };
 
 const skillGroups = computed(() => [
-  { title: t.value.skillLanguages, dotColor: 'cyan', items: ['C++', 'Python', 'Java', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Dart', 'Kotlin'] },
-  { title: t.value.skillFrameworks, dotColor: 'teal', items: ['Angular', 'React', 'Vue.js', 'Spring Boot', 'Flutter', 'Vite'] },
-  { title: t.value.skillDatabases, dotColor: 'amber', items: ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB', 'Firebase'] },
-  { title: t.value.skillIDEs, dotColor: 'green', items: ['VS Code', 'IntelliJ IDEA', 'WebStorm', 'Android Studio', 'Visual Studio'] },
-  { title: t.value.skillCloud, dotColor: 'purple', items: ['Firebase', 'Netlify', 'Vercel', 'AWS'] },
-  { title: t.value.skillSoft, dotColor: 'cyan', items: [t.value.softResponsibility, t.value.softProactivity, t.value.softTeamwork, t.value.softAdaptability] }
+  { title: t.value.skillLanguages, dotColor: 'cyan', items: ['Python', 'Java', 'TypeScript', 'JavaScript', 'Kotlin', 'Dart'] },
+  { title: t.value.skillDataMl, dotColor: 'teal', items: ['MS Excel', 'Power BI', 'Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn', 'PySpark', 'Feature Engineering'] },
+  { title: t.value.skillMLOps, dotColor: 'amber', items: ['FastAPI', 'MLflow', 'Docker', 'Git/GitHub', 'Data Monitoring', 'Technical Documentation'] },
+  { title: t.value.skillDatabases, dotColor: 'green', items: ['MySQL', 'SQLite', 'PostgreSQL', 'MongoDB', 'SQL'] },
+  { title: t.value.skillSoftware, dotColor: 'purple', items: ['Spring Boot', 'Angular', 'DDD', 'CQRS', 'Layered Architecture', 'Scrum/Agile'] },
+  { title: t.value.skillTesting, dotColor: 'cyan', items: ['JUnit 5', 'Mockito', 'Cucumber', 'Gherkin', 'Unit Testing', 'Integration Testing'] },
+  { title: t.value.skillCloud, dotColor: 'teal', items: ['Firebase', 'Netlify', 'Microsoft Azure'] },
+  { title: t.value.skillSoft, dotColor: 'amber', items: [t.value.softResponsibility, t.value.softProactivity, t.value.softTeamwork, t.value.softAdaptability] }
 ]);
 </script>
 
 <template>
   <section id="skills" class="section" aria-labelledby="skills-heading">
-    <div class="container">
+    <div class="wrap">
       <section-header
         :label="t.skillsLabel"
         :title="t.skillsTitle"
@@ -67,7 +69,7 @@ const skillGroups = computed(() => [
 <style scoped>
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.7rem;
 }
 
@@ -109,7 +111,7 @@ const skillGroups = computed(() => [
 
 @media (max-width: 900px) {
   .skills-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

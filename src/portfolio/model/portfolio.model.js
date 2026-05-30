@@ -6,10 +6,11 @@
 
 export const profileData = {
   name: 'Britney Qqueso',
-  fullName: 'Britney Qqueso Rodriguez',
-  role: 'Software Engineering Student & Developer',
+  fullName: 'Britney Delhy Qqueso Rodriguez',
+  role: 'Software Engineering Student · Analytics, ML & Applied AI',
+  location: 'Lima, Peru',
   email: 'britneyrodriguez2801@gmail.com',
-  phone: '+51949878644',
+  phone: '+51 949878644',
   cvUrl: 'assets/Britney_CV.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/britney-qqueso-rodriguez-7b9070348/',
@@ -19,40 +20,61 @@ export const profileData = {
 
 export const projects = [
   {
-    id: 'mecanet',
-    name: 'MECANET',
+    id: 'mining-analytics',
+    name: 'Mining Analytics ML Pipeline',
+    type: 'Machine Learning · Mining',
+    problem: 'Operational mining data needs to be processed and analyzed to estimate failure risk in equipment.',
+    impactNum: 'ML',
+    impactCap: 'predictive maintenance risk scoring',
     iconColor: 'var(--cyan)',
-    tags: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'MySQL', 'JetBrains']
+    tags: ['Python', 'Pandas', 'NumPy', 'PySpark', 'Scikit-learn', 'FastAPI', 'MLflow', 'Matplotlib', 'Docker', 'GitHub'],
+    demo: '',
+    github: ''
   },
   {
     id: 'agrotech',
     name: 'AgroTech',
+    type: 'Web · Mobile · API',
+    problem: 'Farm operations require scalable modules for authentication, user management and role-based workflows.',
+    impactNum: 'QA',
+    impactCap: 'unit, integration and BDD coverage',
     iconColor: 'var(--teal)',
-    tags: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'Kotlin', 'MySQL', 'Cucumber']
+    tags: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'Kotlin', 'MySQL', 'JUnit 5', 'Mockito', 'Cucumber'],
+    demo: '',
+    github: ''
+  },
+  {
+    id: 'mecanet',
+    name: 'Mecanet',
+    type: 'Software Architecture',
+    problem: 'Machinery, assets and preventive maintenance need better operational control and domain traceability.',
+    impactNum: 'DDD',
+    impactCap: 'layered architecture with CQRS',
+    iconColor: 'var(--violet)',
+    tags: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'DDD', 'CQRS', 'Relational Databases'],
+    demo: '',
+    github: ''
   },
   {
     id: 'sudoku-tech',
     name: 'Sudoku-Tech',
+    type: 'Algorithms · Analysis',
+    problem: 'Sudoku-solving strategies need to be compared by response time, complexity and efficiency.',
+    impactNum: '2x',
+    impactCap: 'brute force vs backtracking analysis',
     iconColor: 'var(--amber)',
-    tags: ['Python']
-  },
-  {
-    id: 'utime',
-    name: 'UTime',
-    iconColor: 'var(--green)',
-    tags: ['Dart', 'Flutter', 'Android Studio', 'Kotlin', 'Java', 'SQLite', 'Firebase']
+    tags: ['Python', 'Algorithms', 'Data Structures', 'Complexity Analysis'],
+    demo: '',
+    github: ''
   }
 ];
 
 export const certifications = [
-  { name: 'Introduction to Cybersecurity', issuer: 'Cisco Networking Academy', year: 2024 },
-  { name: 'Responsive Web Design', issuer: 'freeCodeCamp', year: 2024 },
-  { name: 'Python for Data Science', issuer: 'Coursera', year: 2024 },
-  { name: 'JavaScript Algorithms and Data Structures', issuer: 'freeCodeCamp', year: 2024 },
-  { name: 'Git & GitHub Fundamentals', issuer: 'Platzi', year: 2023 },
-  { name: 'Agile Development with Scrum', issuer: 'Coursera', year: 2023 },
-  { name: 'AWS Cloud Practitioner Essentials', issuer: 'AWS Training', year: 2023 },
-  { name: 'Introduction to SQL', issuer: 'DataCamp', year: 2023 },
-  { name: 'Flutter Development Bootcamp', issuer: 'Udemy', year: 2023 },
-  { name: 'Object-Oriented Programming in Java', issuer: 'Coursera', year: 2022 }
+  { name: 'Python for Data Science, AI & Development', issuer: 'Coursera', date: 'May 2026' },
+  { name: 'Generative AI: Introduction and Applications', issuer: 'Coursera', date: 'April 2026' },
+  { name: 'Scrum Master Certification', issuer: 'LearnQuest (Coursera)', date: 'April 2026' },
+  { name: 'Python for Everybody', issuer: 'University of Michigan (Coursera)', date: 'November 2025' },
+  { name: 'Databases for Data Scientists', issuer: 'University of Colorado Boulder (Coursera)', date: 'August 2025' },
+  { name: 'Good with Words: Writing and Editing', issuer: 'University of Michigan (Coursera)', date: 'August 2025' },
+  { name: 'Generative AI Fundamentals', issuer: 'IBM (Coursera)', date: 'April 2025' }
 ];
