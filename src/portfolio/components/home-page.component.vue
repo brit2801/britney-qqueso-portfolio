@@ -6,7 +6,6 @@ import AboutSection from './about-section.component.vue';
 import EducationSection from './education-section.component.vue';
 import SkillsSection from './skills-section.component.vue';
 import ProjectsSection from './projects-section.component.vue';
-import CertificationsSection from './certifications-section.component.vue';
 import ContactSection from './contact-section.component.vue';
 
 useScrollReveal();
@@ -27,9 +26,6 @@ useScrollReveal();
     <hr class="divider" aria-hidden="true">
 
     <projects-section />
-    <hr class="divider" aria-hidden="true">
-
-    <certifications-section />
     <hr class="divider" aria-hidden="true">
 
     <contact-section />
