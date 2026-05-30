@@ -1,18 +1,12 @@
 <script setup>
-import { onMounted } from 'vue';
+import AmbientBackground from './core/components/ambient-background.component.vue';
 import NavBar from './core/components/nav-bar.component.vue';
 import AppFooter from './core/components/app-footer.component.vue';
-import { useTheme } from './core/composables/use-theme.composable.js';
-
-const { applyTheme } = useTheme();
-
-onMounted(() => {
-  applyTheme();
-});
 </script>
 
 <template>
   <div class="app-wrapper dark-mode">
+    <ambient-background />
     <nav-bar />
     <main id="main-content" role="main">
       <router-view />
@@ -23,21 +17,17 @@ onMounted(() => {
 
 <style>
 .app-wrapper {
+  position: relative;
+  isolation: isolate;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  transition: background 0.35s ease, color 0.35s ease;
-}
-
-.app-wrapper.dark-mode {
-  background: var(--bg);
-}
-
-.app-wrapper.light-mode {
-  background: var(--bg);
+  background: transparent;
 }
 
 #main-content {
+  position: relative;
+  z-index: 1;
   flex: 1;
 }
 </style>
