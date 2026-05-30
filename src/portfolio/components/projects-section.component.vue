@@ -9,8 +9,8 @@ const featuredProjects = PortfolioService.getFeaturedProjects();
 </script>
 
 <template>
-  <section id="projects" class="section" aria-labelledby="projects-heading">
-    <div class="container">
+  <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+    <div class="wrap">
       <section-header
         :label="t.projectsLabel"
         :title="t.projectsTitle"
@@ -18,7 +18,7 @@ const featuredProjects = PortfolioService.getFeaturedProjects();
         :subtitle="t.projectsSubtitle"
       />
 
-      <div class="projects-list stagger">
+      <div class="proj-list stagger">
         <project-card
           v-for="project in featuredProjects"
           :key="project.id"
@@ -35,10 +35,14 @@ const featuredProjects = PortfolioService.getFeaturedProjects();
 </template>
 
 <style scoped>
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.projects-section :deep(.section-subtitle) {
+  max-width: 640px;
+}
+
+.proj-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
 }
 
 .view-all {
@@ -46,10 +50,8 @@ const featuredProjects = PortfolioService.getFeaturedProjects();
   align-items: center;
   gap: 0.5rem;
   margin-top: 2rem;
-  padding: 0.7rem 1.8rem;
-  border-radius: 8px;
-  font-family: var(--font-body);
-  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 999px;
   font-size: 0.9rem;
   color: var(--text-1);
   border: 1px solid var(--border);
@@ -59,9 +61,10 @@ const featuredProjects = PortfolioService.getFeaturedProjects();
 }
 
 .view-all:hover {
-  border-color: var(--cyan);
-  background: rgba(56, 189, 248, 0.05);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.08);
+  transform: translateY(-3px);
+  border-color: rgba(54, 233, 214, 0.55);
+  background: var(--glass-hi);
+  box-shadow: 0 12px 30px -14px var(--glow-cyan);
 }
 
 .view-all:hover .pi {
@@ -70,5 +73,11 @@ const featuredProjects = PortfolioService.getFeaturedProjects();
 
 .view-all .pi {
   transition: transform 0.3s;
+}
+
+@media (max-width: 900px) {
+  .proj-list {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
